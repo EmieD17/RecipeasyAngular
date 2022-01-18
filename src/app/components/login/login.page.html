@@ -1,0 +1,43 @@
+<!--<p>login works!</p>
+
+<a [routerLink]="['/login']">sign up</a>-->
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col-12 col-sm-10 offset-sm-1">
+      <form #form="ngForm" [formGroup]="loginForm" (ngSubmit)="logIn()" class="row g-3">
+        <div>
+          <input
+          formControlName="email"
+          [class.is-invalid]=" loginForm.get('email')?.invalid && (form.submitted || loginForm.get('email')?.touched)"
+          type="email" placeholder="Email" class="form-control">
+          <div class="invalid-feedback text-start">
+            Please provide a valid Email.
+          </div>
+        </div>
+
+        <div>
+          <input
+          formControlName="password"
+          [class.is-invalid]="loginForm.get('password')?.invalid && (form.submitted || loginForm.get('password')?.touched)"
+          type="password" placeholder="Password" class="form-control">
+          <div class="invalid-feedback text-start"> <!--loginForm.get('password')?.dirty -->
+            Please provide a password minimum 3 characters long.
+          </div>
+        </div>
+
+        <button  class="btn btn-primary" type="submit">Sign in</button>
+        <!--[disabled]="loginForm.invalid"-->
+        <!--
+        <button (click)="process(emailInput.value)"></button>
+        <img [src]="model.src" alt="" ()="var = ...">-->
+
+        <a [routerLink]="['/signup']" class="btn btn-sm btn-outline-success mt-4" role="button">Sign up</a>
+      </form>
+    </div>
+  </div>
+</div>
+
+{{ loginForm.get('email')?.errors | json | uppercase}}
+
+{{ loginForm.get('email')?.valid}}

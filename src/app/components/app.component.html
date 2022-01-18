@@ -1,0 +1,54 @@
+<!--<h1>hello world!</h1>
+
+{{title}}
+
+<h1 class="text-success">Recipeasy!</h1>
+
+<button type="button"
+        class="btn btn-primary"
+        tooltip="This is a tooltip!">
+        Hover me
+</button>
+
+<router-outlet></router-outlet>
+
+<h2>Un titre</h2>
+
+<bs-datepicker-inline></bs-datepicker-inline>-->
+
+<div class="fixed-top">
+  <div class="row">
+    <div class="col text-center">
+      <h1>Recipeasy!</h1>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand navbar-dark bg-primary">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse justify-content-between">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link text-light">Recipes</a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a routerLink="/profile" class="nav-link text-light">Profile</a>
+          </li>
+          <li>
+            <button
+              (click)="logOut()"
+              type="button" class="btn btn-outline-light">Log out</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="pt-4" style="margin: 112px 0px 24px 0px;">
+  <router-outlet></router-outlet>
+</div>
+
+

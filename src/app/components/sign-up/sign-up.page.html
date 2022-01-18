@@ -1,0 +1,38 @@
+<!--<p>sign-up works!</p>
+
+<a routerLink="/">back to login</a>-->
+
+<div class="container text-center">
+  <div class="row">
+    <div *ngIf="signUpError" class="alert alert-danger" role="alert">
+      Email already taken
+    </div>
+
+    <div class="col-sm-10 offset-sm-1 ">
+
+
+
+
+      <form [formGroup]="signupForm" (ngSubmit)="signUp()"class="row g-3">
+        <input formControlName="email" type="email" placeholder="Email" class="form-control">
+
+        <input formControlName="password" type="password" placeholder="Password" class="form-control">
+
+
+        <input
+        formControlName="passwordConfirmation"
+        [class.is-invalid]="signupForm.hasError('passwordConfirmationMustMatch')"
+        type="password" placeholder="Password confirmation" class="form-control">
+        <div class="invalid-feedback text-start">
+          Password confirmation must match
+        </div>
+
+        <button class="btn btn-success" type="submit">Create my account</button>
+
+        <a routerLink="/" class="btn btn-sm btn-outline-secondary mt-4" role="button">Cancel</a>
+      </form>
+    </div>
+  </div>
+</div>
+
+{{ signupForm.errors | json}}
