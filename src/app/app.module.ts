@@ -12,7 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RecipesPage } from './components/recipes/recipes.page';
 import { ProfilePage } from './components/profile/profile.page';
 import { UsersListComponent } from './components/users-list/users-list.component';
-import { UsersItemComponent } from './components/users-item/users-item.component';
+import { UsersListItemComponent } from './components/users-list-item/users-list-item.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { UsersItemComponent } from './components/users-item/users-item.component
     RecipesPage,
     ProfilePage,
     UsersListComponent,
-    UsersItemComponent
+    UsersListItemComponent
   ],
   imports: [
     BrowserModule,

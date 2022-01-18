@@ -2,11 +2,11 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { User } from '../../models/user.model';
 
 @Component({
-  selector: '[app-users-item]',
-  templateUrl: './users-item.component.html',
-  styleUrls: ['./users-item.component.scss']
+  selector: '[app-users-list-item]',
+  templateUrl: './users-list-item.component.html',
+  styleUrls: ['./users-list-item.component.scss']
 })
-export class UsersItemComponent implements OnInit {
+export class UsersListItemComponent implements OnInit {
 
   @Input() user! : User;
   @Output() readonly clicked: EventEmitter<User> = new EventEmitter();

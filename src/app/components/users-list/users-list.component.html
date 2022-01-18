@@ -8,7 +8,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr app-users-item
+    <tr app-users-list-item
       *ngFor="let user of usersInput"
       [user]="user"
       (clicked)="userClicked($event)">
